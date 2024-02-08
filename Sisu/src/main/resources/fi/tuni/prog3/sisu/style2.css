@@ -1,0 +1,13 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 12.4.2022, 16.05.44
+    Author     : Johanna
+*/
+
+.bodybg{
+ -fx-background-image: url('t2.jpg');
+ -fx-background-size: 100% 100%;
+}

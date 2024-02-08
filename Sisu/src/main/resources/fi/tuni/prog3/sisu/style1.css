@@ -1,0 +1,13 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 11.4.2022, 17.33.26
+    Author     : Johanna
+*/
+
+.bodybg{
+ -fx-background-image: url('tampere.jpg');
+ -fx-background-size: 100% 100%;
+}

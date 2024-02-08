@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="546.0" prefWidth="1140.0" styleClass="bodybg" stylesheets="@style2.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fi.tuni.prog3.sisu.SecondaryController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.52" prefHeight="566.0" prefWidth="643.0" style="-fx-background-color: WHITE;" AnchorPane.bottomAnchor="-6.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="497.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="77.0" fitWidth="252.0" layoutX="13.0" layoutY="15.0" AnchorPane.bottomAnchor="468.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="390.0" AnchorPane.topAnchor="15.0">
+               <image>
+                  <Image url="@tuni-some-logo.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="error1" layoutX="80.0" layoutY="92.0" prefHeight="49.0" prefWidth="119.0" text="Check, that:" textFill="#ff1515" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="456.0" AnchorPane.topAnchor="92.0">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+            <VBox layoutX="205.0" layoutY="105.0" prefHeight="97.0" prefWidth="355.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="356.0" text="Name contains only letters between a-z" textFill="#f20000">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="25.0" prefWidth="356.0" text="Student number contains only numbers" textFill="#f20000">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="25.0" prefWidth="356.0" text="Starting year is smaller than" textFill="#f20000">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="25.0" prefWidth="356.0" text="graduation year" textFill="#f20000">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <GridPane alignment="CENTER" layoutX="6.0" layoutY="193.0" nodeOrientation="LEFT_TO_RIGHT" pickOnBounds="false" prefHeight="231.0" prefWidth="624.0" AnchorPane.bottomAnchor="136.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="510.0" AnchorPane.topAnchor="193.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="403.0" minWidth="10.0" prefWidth="189.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="643.0" minWidth="10.0" prefWidth="413.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="72.0" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="72.0" minHeight="-Infinity" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="72.0" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="72.0" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label alignment="CENTER" prefHeight="15.0" prefWidth="184.0" text="Student name:" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="name" promptText="Write name here..." GridPane.columnIndex="1" />
+            <TextField fx:id="number" prefHeight="25.0" prefWidth="360.0" promptText="Write number here..." GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label alignment="CENTER" prefHeight="15.0" prefWidth="184.0" text="Student number:" textAlignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="15.0" prefWidth="184.0" text="Starting year:" textAlignment="CENTER" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="15.0" prefWidth="184.0" text="Graduation year:" textAlignment="CENTER" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="start" prefHeight="25.0" prefWidth="418.0" promptText="Choose starting year..." style="-fx-background-color: WHITE;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ComboBox fx:id="finish" prefHeight="25.0" prefWidth="418.0" promptText="Choose graduation year..." style="-fx-background-color: WHITE;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <Button fx:id="primaryButton1" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="919.0" layoutY="14.0" nodeOrientation="RIGHT_TO_LEFT" onAction="#switchToSecondary" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: PURPLE; -fx-alignment: CENTER;" text="Change to Finnish" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" AnchorPane.rightAnchor="47.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Button>
+      <Button mnemonicParsing="false" onAction="#switchToMainPageEN" prefHeight="25.0" prefWidth="204.0" style="-fx-background-color: PURPLE;" text="Continue to Mainpage" textFill="WHITE" AnchorPane.bottomAnchor="101.0" AnchorPane.leftAnchor="410.0" AnchorPane.rightAnchor="526.0">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

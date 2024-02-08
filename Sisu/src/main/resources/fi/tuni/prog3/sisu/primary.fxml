@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="546.0" prefWidth="1140.0" styleClass="bodybg" stylesheets="@style2.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fi.tuni.prog3.sisu.PrimaryController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.52" prefHeight="560.0" prefWidth="655.0" style="-fx-background-color: WHITE;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="485.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="77.0" fitWidth="252.0" layoutX="13.0" layoutY="15.0" AnchorPane.bottomAnchor="468.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="390.0" AnchorPane.topAnchor="15.0">
+               <image>
+                  <Image url="@tuni-some-logo.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="error" layoutX="17.0" layoutY="92.0" prefHeight="112.0" prefWidth="624.0" textFill="#ff1515" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="92.0">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <GridPane alignment="CENTER" layoutX="6.0" layoutY="193.0" nodeOrientation="LEFT_TO_RIGHT" pickOnBounds="false" prefHeight="231.0" prefWidth="624.0" AnchorPane.bottomAnchor="136.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="510.0" AnchorPane.topAnchor="193.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="403.0" minWidth="10.0" prefWidth="189.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="643.0" minWidth="10.0" prefWidth="413.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="72.0" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="72.0" minHeight="-Infinity" prefHeight="40.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="72.0" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="72.0" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" prefHeight="15.0" prefWidth="184.0" text="Opiskelijan nimi:" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="name" promptText="Kirjoita nimi tähän" GridPane.columnIndex="1" />
+            <TextField fx:id="number" prefHeight="25.0" prefWidth="360.0" promptText="Kirjoita numero tähän" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label alignment="CENTER" prefHeight="15.0" prefWidth="184.0" text="Opiskelijanumero:" textAlignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="15.0" prefWidth="184.0" text="Aloitusvuosi:" textAlignment="CENTER" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="15.0" prefWidth="184.0" text="Arvioitu valmistumisvuosi:" textAlignment="CENTER" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="start" prefHeight="25.0" prefWidth="418.0" promptText="Valitse aloitusvuosi:" style="-fx-background-color: WHITE;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ComboBox fx:id="finish" prefHeight="25.0" prefWidth="418.0" promptText="Valitse valmistumisvuosi:" style="-fx-background-color: WHITE;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <Button fx:id="secondaryButton" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="919.0" layoutY="14.0" nodeOrientation="RIGHT_TO_LEFT" onAction="#switchToSecondary" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: PURPLE; -fx-alignment: CENTER;" text="Change to English" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" AnchorPane.rightAnchor="47.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Button>
+      <Button mnemonicParsing="false" onAction="#switchToMainPage" prefHeight="25.0" prefWidth="204.0" style="-fx-background-color: PURPLE;" text="Jatka pääsivulle" textFill="WHITE" AnchorPane.bottomAnchor="101.0" AnchorPane.leftAnchor="410.0" AnchorPane.rightAnchor="526.0">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
